@@ -1,0 +1,19 @@
+.toplink {
+    width: 100%;
+    height: 25px;
+    top: 0;
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: 10;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    background-color: #574dad;
+    border-style: outset;
+    border-color: #2314a3;
+    border-width: 5px;
+}
+
+.linkitem {
+    z-index: 1;
+    color: #2314a3;
+}
