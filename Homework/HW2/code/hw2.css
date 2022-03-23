@@ -4,16 +4,86 @@
     top: 0;
     position: fixed;
     background-color: #FFFFFF;
-    z-index: 10;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
-    background-color: #574dad;
-    border-style: outset;
-    border-color: #2314a3;
+    background-color: #111111;
+    border-style: hidden;
+    border-color: #111111;
     border-width: 5px;
+    overflow: auto;
 }
 
-.linkitem {
-    z-index: 1;
-    color: #2314a3;
+.toplink a {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 5px 0;
+    color: white;
+    font-size: 15px;
+}
+
+.toplink a:hover {
+    background-color: rgb(39, 0, 66);
+}
+
+#divpic {
+    text-align: center;
+    margin: 0px;
+    padding: 40px 0 0 0;
+    background-image: url('../../Images/view.jpeg');
+    background-size: cover;
+    z-index: 3;
+}
+
+.divmid1 {
+    color: snow;
+    text-align: center;
+}
+
+.socimg {
+    border: 3px dotted;
+    padding: 0px;
+    background-color: lightgray;
+    width: fit-content;
+    display: inline-block;
+}
+
+#emailid:hover {
+    color: lightgray;
+}
+
+details {
+    font-style: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+details h3 {
+    font-style: oblique;
+}
+
+#skills {}
+
+#exps {}
+
+#autobio {}
+
+#footer1 {
+    color: snow;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    bottom: 0px;
+}
+
+body {
+    text-align: center;
+    color: snow;
+    background-position-y: 150px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #222222;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url('../../Images/swimming1.jpeg');
 }
