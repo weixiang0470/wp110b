@@ -55,10 +55,24 @@
 details {
     font-style: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 25px;
+    background-color: #222222;
+    border-style: outset;
+    display: inline-block;
+    padding-left: 7%;
+    z-index: 10;
+}
+
+details>summary {
+    list-style-type: none;
 }
 
 details h3 {
     font-style: oblique;
+}
+
+.detailp {
+    font-style: italic;
 }
 
 #footer1 {
