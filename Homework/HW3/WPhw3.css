@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    background-color: bisque;
+    color:rgb(76, 16, 124);
+    border-radius:25px;
+    border-style: initial;
+    padding: 10px 10px;
+    margin:0;
+}
+details{
+    text-align: center;
+    width:100%;
+}
+details summary{
+    text-align: center;
+    border-style:dashed;
+    border-color: rgb(50, 25, 97);
+    padding:5px 5px;
+    margin:0;
+    border: radius 6px;
+    width: fit-content;
+    display: inline-block;
+    list-style-type:none;
+}
+details summary:hover{
+    border-color: black;
+    background-color: azure;
+}
+button{
+    background-color: rgb(202, 142, 63);
+    border-radius:10px;
+    padding:5px;
+    margin:15px;
+    color: aliceblue;
+}
+.setmid{
+    text-align: center;
+}
