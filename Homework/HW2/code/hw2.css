@@ -48,8 +48,12 @@
     display: inline-block;
 }
 
-#emailid:hover {
+#emailid {
     color: lightgray;
+}
+
+#emailid:hover {
+    color: rgb(179, 195, 245);
 }
 
 details {
