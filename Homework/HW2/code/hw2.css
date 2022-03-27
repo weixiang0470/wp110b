@@ -48,11 +48,11 @@
     display: inline-block;
 }
 
-#emailid {
+#maid {
     color: lightgray;
 }
 
-#emailid:hover {
+#maid:hover {
     color: rgb(179, 195, 245);
 }
 
