@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Xiang Poultry Farm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Images/otterHeadS.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="Homepage.css">
+    <link rel="stylesheet" type="text/css" href="Login.css">
+    <link rel="stylesheet" type="text/css" href="Body.css">
+</head>
+<!-- Login form -->
+<div id="id01" class="modal">
+
+    <form id="LoginForm" class="modal-content animate" method="post">
+        <h1>&#9775Login&#9775</h1>
+        <hr>
+        <div class="container">
+            <input class="inpcls" type="text" placeholder="Username/Email" name="uname" required><br>
+            <input class="inpcls" type="password" placeholder="Enter Password" name="psw" required> <br>
+
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            <button id="subid" onclick="Match()">Login</button>
+        </div>
+    </form>
+</div>
+<!--Sign up form-->
+<div id="id02" class="modal">
+    <form id="SignUpForm" class="modal-content animate" method="post">
+        <h1>&#9775Sign Up&#9775</h1>
+        <hr>
+        <div class="container">
+            <input class="inpcls" type="text" placeholder="Username"><br>
+            <input class="inpcls" pattern="\w+@[a-z]+\.[a-z.]+" type="email" placeholder="Email"><br>
+            <input class="inpcls" type="password" placeholder="Password"><br>
+            <input class="inpcls" type="password" placeholder="Repeat Password"><br>
+        </div>
+        <input id="labcheck" type="checkbox" idname="check1">
+        <label id="labid" for="check1">I agree all statements in <a>term of service</a></label>
+        <br>
+        <button id="subid" onclick="signup()">Sign Up</button>
+    </form>
+</div>
+<!--Logout form-->
+<div id="id03" class="modal">
+    <form id="LogOutForm" class="modal-content animate" method="post">
+        <div class="container">
+            <h3 id="UserInformation" class="inpcls" style="font-size:xx-large;"></h3><br>
+            <img id="loid" onclick="logout()" src="../Images/Logout.png">
+        </div>
+    </form>
+
+</div>
+<!--Order form-->
+<div id="id04" class="modal">
+    <form id="OrderForm" class="modal-content animate" method="post">
+        <h1 id="ProductName"></h1>
+        <hr>
+        <div class="container">
+            <h6 id="SinglePrice" style="margin: 0;font-size: 4vw;"></h6>
+            <img onclick="Minus()" src="../Images/-.png" style="max-width:4vw;">
+            <h1 id="Quantities" style="top:-2vw;background-color:snow;max-width:8vw;margin-top:0;font-size:3vw;position:relative;">8</h1>
+            <img onclick="Plus()" src="../Images/+.png" style="max-width:4vw;"><br>
+            <h5 id="Price" style="font-size:2.5vw;margin:0vw;">0</h5>
+            <br>
+            <img onclick="SendOrder()" src="../Images/sendorder.png" style="max-width: 10vw;">
+        </div>
+    </form>
+
+</div>
+<div style="position:relative; height: 52px;">
+    <div class="dropdown">
+        <!--<button class="dropbtn">Login</button>-->
+        <img onmouseover="Show()" id="Login/out" class="dropbtn" src="../Images/login.png">
+        <div class="dropdown-content">
+            <a id="Login" onclick="TestInformation()">Login</a>
+            <a id="SignUp" onclick="document.getElementById('id02').style.display='block'">Sign Up</a>
+        </div>
+    </div>
+    <img src="../Images/logo.png" style="max-height:4vw; position: absolute;  background-color: bisque; left:2px;">
+    <img id="WhatUser" src="../Images/GuestAcct.png">
+    <a href="Comment.html"><img onmouseover="hover(this)" onmouseout="out(this)" src="../Images/comment.png" style="max-height:4vw; position: absolute;  background-color: bisque; right:9vw;"></a>
+    <a href="Cart.html"><img onmouseover="hover(this)" onmouseout="out(this)" src="../Images/cart.png" style="max-height:3.5vw; position: absolute;  background-color: bisque; right:23vw;"></a>
+</div>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <div class="numbertext">News</div>
+        <img src="../Images/OmegaEgg.PNG" style="height: 300px;">
+        <div class="text">New product available!!!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">News</div>
+        <img src="../Images/Ahbee.jpg" style="height: 300px;">
+        <div class="text">Winner in the last month picture competition</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">News</div>
+        <img src="../Images/BestWorker.jpg" style="height: 300px;">
+        <div class="text">Best worker in last month</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<body>
+    <div id="Introduction">
+        <img src="../Images/intro.png" style="max-width:50vw;">
+        <hr> We are not only a farm but a visiable farm for children and families together~ We have a lot of activities for children in our farm, such as feeding chicken, picking eggs surrounded by chickens and different type of beautiful birds. We also have
+        some fight chicken show in our farm, which is really interesting and exciting avtivity for you and your family to enjoy together!!!<br><br> By the way, if you don't have time to visit us you can also signup without charing any fee but after that
+        you can enjoy discount of our products. If you are really lazy to do that you can also order our products as guest~<br> We provide free delivery fee as a order higher than 1000NTD!!! So What're you waiting for? Go to our shopping area and grab
+        the products that you need!!!
+    </div>
+    <div id="Shopping">
+        <img src="../Images/shoppingarea.png" style="max-width:50vw;">
+        <hr>
+        <div id="Products">
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="OmegaEgg" src="../Images/OmegaEgg.PNG" style="max-width:31vw;"><br><br><br>
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="10eggs" src="../Images/10eggs.PNG" style="max-width:31vw;"><br><br><br>
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="30eggs" src="../Images/30eggs.PNG" style="max-width:31vw;"><br><br><br>
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="Chicken" src="../Images/Achicken.PNG" style="max-width:31vw;"><br><br><br>
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="Peeled" src="../Images/chicken.PNG" style="max-width:31vw;"><br><br><br>
+            <img onclick="What(this.name);ShowOrder();Calculate();" name="Bird eggs" src="../Images/birdegg.PNG" style="max-width:31vw;"><br><br><br>
+        </div>
+    </div>
+</body>
+<footer style="background-color: #555555; height: 8vw; position: relative; width:100%; bottom:0;">
+    <img src="../Images/foundername.png" style="max-height:8vw; position:absolute; right:7vw; bottom:0;">
+    <img src="../Images/founder.png" style="max-height: 8vw; position:absolute; right:0; bottom:0;">
+</footer>
+<script src="Homepage.js"></script>
+<script src="Login.js"></script>
+<script src="SignUp.js"></script>
+<script src="Menu.js"></script>
+<script src="order.js"></script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
+    var modal3 = document.getElementById('id03');
+    var modal4 = document.getElementById('id04');
+
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal || event.target == modal2 || event.target == modal3 || event.target == modal4) {
+            modal.style.display = "none";
+            modal2.style.display = "none";
+            modal3.style.display = "none";
+            modal4.style.display = "none";
+        }
+    }
+    window.onload = function(event) {
+
+        TestUser();
+    }
+</script>
+
+</html>

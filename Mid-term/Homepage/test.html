@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Comments</title>
+    <style>
+        body {
+            padding: 80px;
+            font: 16px Helvetica, Arial;
+            background: linear-gradient(#ce7612, #f5dc52);
+        }
+        
+        h1 {
+            font-size: 2em;
+        }
+        
+        h2 {
+            font-size: 1.2em;
+        }
+        
+        textarea {
+            width: 500px;
+            height: 100px;
+            border: 1px solid #eee;
+            border-top-color: #ddd;
+            border-left-color: #ddd;
+            border-radius: 2px;
+            padding: 15px;
+            font-size: .8em;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="content">
+        <!-- list: 列出所有貼文的畫面 -->
+        <div id="list" class="panel">
+            <h1>Product/Service Comments</h1>
+            <p><a href="#/Omega/">Omega eggs</a></p>
+            <p><a href="#/Egg/">Normal eggs</a></p>
+            <p><a href="#/Delivery/">Delivery guy</a></p>
+            <ul id="posts">
+            </ul>
+        </div>
+        <!-- create : 創建新貼文的畫面 -->
+
+
+        <!-- Omega : Omega -->
+        <div id="Omega" class="panel">
+            <h1>Omega</h1>
+            <a href="#/list/" style="position:fixed; top:8px; right:8px;">Exit</a>
+
+            <ul id="OmegaComment">
+            </ul>
+
+            <h2>New comment</h2>
+            <p><textarea id="OmegaCommentArea" placeholder="Comments"></textarea></p>
+            <button onclick="OmegaSave()">Comment</button>
+        </div>
+
+        <!-- show : 顯示某筆貼文的畫面 -->
+
+    </section>
+    <script>
+        let OmegaPosts = [];
+
+        // 顯示 id 指定的 panel (div)
+        function showPanel(id) {
+            document.querySelectorAll('.panel').forEach((node) => node.style.display = 'none')
+            document.getElementById(id).style.display = 'block'
+        }
+
+        // 列出所有貼文
+        function list() {
+            showPanel('list')
+        }
+
+        // 儲存貼文
+
+        //OmegaSave
+        function OmegaSave() {
+            var comment = document.getElementById('OmegaCommentArea').value
+            var user = 'user1'
+            OmegaPosts.push({
+                User: user,
+                Comment: comment,
+            })
+            alert('Comment Success')
+            document.getElementById('OmegaCommentArea').value = ''
+
+            let OmegaComments = [];
+            for (let i = 0; i < OmegaPosts.length; i++) {
+                OmegaComments.push(`<li><h2>${OmegaPosts[i].User}</h2><p>${OmegaPosts[i].Comment}</p></li>`)
+            }
+            document.getElementById('OmegaComment').innerHTML = OmegaComments.join('\n')
+
+        }
+
+        // 顯示 id=match[1] 所指定的貼文
+
+
+        // 顯示『創建新貼文』的畫面。
+
+
+        //Omega
+        function Omega(match) {
+            showPanel('Omega')
+        }
+
+        // router 路徑地圖
+        let routeMap = [
+            [/^\/?list\/?$/, list],
+            [/^\/?Omega\/?$/, Omega],
+        ]
+
+        // 當 hash 改變時，觸發路徑地圖對應的函數。
+        window.onhashchange = function() {
+            var hash = window.location.hash.trim().substring(1)
+            for (let [regexp, f] of routeMap) {
+                var m = hash.match(regexp)
+                if (m) {
+                    f(m, hash)
+                    break
+                }
+            }
+        }
+
+        // 網頁載入完成後，呼叫 list() 列出所有貼文！
+        window.onload = function() {
+            window.location.hash = '#/list/'
+        }
+    </script>
+</body>
+
+</html>

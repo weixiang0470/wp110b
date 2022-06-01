@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="SignUp.css">
+</head>
+
+<body>
+    <h1>&#9775Sign Up&#9775</h1>
+    <hr>
+    <form id="SignUpForm">
+        <div>
+            <input class="inpcls" type="text" placeholder="Username"><br>
+            <input class="inpcls" pattern="\w+@[a-z]+\.[a-z.]+" type="email" placeholder="Email"><br>
+            <input class="inpcls" type="password" placeholder="Password"><br>
+            <input class="inpcls" type="password" placeholder="Repeat Password"><br>
+        </div>
+        <input id="labcheck" type="checkbox" idname="check1">
+        <label id="labid" for="check1">I agree all statements in <a>term of service</a></label>
+        <br>
+        <button id="subid" onclick="signup()">Sign Up</button>
+        <a href="../Login/Login.html">Go to Login</a>
+    </form>
+</body>
+<script src="SignUp.js"></script>
+
+</html>
