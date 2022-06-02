@@ -129,7 +129,7 @@ body {
     max-width: 8.5vw;
     position: absolute;
     right: -98.5vw;
-    top: -1.5vw;
+    top: -1vw;
 }
 
 .dropdown {
@@ -175,4 +175,13 @@ body {
     border-radius: 5px;
     border-color: bisque;
     border-style: dashed
+}
+
+.footerh6 {
+    margin: 0;
+    font-size: larger;
+    color: snow;
+    position: relative;
+    top: 1vw;
+    left: 1vw;
 }

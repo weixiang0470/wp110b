@@ -126,3 +126,9 @@ function Cancel() {
     localStorage.setItem("CartPrice", "");
     CartSet();
 }
+
+function OrderAndCancel() {
+    var items = localStorage.getItem("CartItems");
+    if (items != "") alert("Order sent!!!");
+    Cancel();
+}
