@@ -1,4 +1,4 @@
-**This project mainly done by myself but I also use some online references,teacher's example**
+* _**This project mainly done by myself but I also use some online references,teacher's example**_
 
 ## **References :**
 1. Some product's image  come from [ShutterStock](https://www.shutterstock.com/zh-Hant)
