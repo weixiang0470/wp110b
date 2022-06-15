@@ -22,7 +22,7 @@ h1 {
     text-align: center;
 }
 
-#subid {
+.subid {
     border-radius: 5px;
     font-size: 15px;
     margin-top: 3px;
@@ -39,7 +39,7 @@ h1 {
     background-color: cadetblue;
 }
 
-#subid:hover {
+.subid:hover {
     background-color: cadetblue;
 }
 
