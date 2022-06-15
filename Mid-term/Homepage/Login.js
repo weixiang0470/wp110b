@@ -1,7 +1,16 @@
 function Match() {
-    var user = localStorage.getItem("username").split(",");
-    var email = localStorage.getItem("email").split(",");
-    var password = localStorage.getItem("password").split(",");
+    var user;
+    var email;
+    var password;
+    if (localStorage.getItem("password") == null) localStorage.setItem("password", "");
+
+    if (localStorage.getItem("username") == null) localStorage.setItem("username", "");
+
+    if (localStorage.getItem("email") == null) localStorage.setItem("email", "");
+
+    user = localStorage.getItem("username").split(",");
+    email = localStorage.getItem("email").split(",");
+    password = localStorage.getItem("password").split(",");
 
     var Current_User = document.getElementById("LoginForm").elements[0].value;
     var Current_Password = document.getElementById("LoginForm").elements[1].value;
