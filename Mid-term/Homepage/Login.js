@@ -82,5 +82,6 @@ function TestUser() {
     } else if (CurUser == "Guest") {
         document.getElementById("WhatUser").src = "../Images/GuestAcct.png";
         document.getElementById("Login/out").src = "../Images/login.png";
+        document.getElementById("Login/out").style = "top:-1.5vw";
     }
 }
