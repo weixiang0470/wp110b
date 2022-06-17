@@ -1,16 +1,19 @@
+//Showing specific product's price and name by it's name
 function What(x) {
     var Name = document.getElementById("ProductName");
     Name.innerHTML = x;
     localStorage.setItem("WhatProduct", x);
     document.getElementById("Quantities").innerHTML = 1;
-    document.getElementById("Price").innerHTML = `0NTD`;
+    //document.getElementById("Price").innerHTML = `0NTD`;
 }
 
+//Showing out the order form
 function ShowOrder() {
     var order = document.getElementById('id04');
     order.style.display = 'block';
 }
 
+//Reduce the quantities of product
 function Minus() {
     var x = document.getElementById("Quantities").innerHTML;
     /*var y = parseInt(x);
@@ -22,6 +25,7 @@ function Minus() {
     Calculate()
 }
 
+//Increase the quantities of product
 function Plus() {
     var x = document.getElementById("Quantities").innerHTML;
     /*var y = parseInt(x);
@@ -31,6 +35,7 @@ function Plus() {
     Calculate()
 }
 
+//Calculating the total price
 function Calculate() {
     var x = document.getElementById("Quantities").innerHTML;
     var product = localStorage.getItem("WhatProduct");
@@ -91,6 +96,7 @@ function Calculate() {
     localStorage.setItem("Price", x * Price);
 }
 
+//Adding selected product to cart(localstorage)
 function SendOrder() {
     alert("Added to cart!");
     document.getElementById("id04").style.display = "none";
@@ -111,6 +117,7 @@ function SendOrder() {
     localStorage.setItem("CartPrice", CartPrice);
 }
 
+//Showing Added items in cart page
 function CartSet() {
     var Items = localStorage.getItem("CartItems").split(',');
     var Price = localStorage.getItem("CartPrice").split(',');
@@ -121,12 +128,14 @@ function CartSet() {
     }
 }
 
+//Delete all item in cart 
 function Cancel() {
     localStorage.setItem("CartItems", "");
     localStorage.setItem("CartPrice", "");
     CartSet();
 }
 
+//Sending fake order to no where and delete all item in cart
 function OrderAndCancel() {
     var items = localStorage.getItem("CartItems");
     if (items != "") alert("Order sent!!!");

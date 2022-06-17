@@ -1,7 +1,9 @@
+//Matching member name/email, password
 function Match() {
     var user;
     var email;
     var password;
+
     if (localStorage.getItem("password") == null) localStorage.setItem("password", "");
 
     if (localStorage.getItem("username") == null) localStorage.setItem("username", "");
@@ -69,6 +71,7 @@ function Match() {
     }
 }
 
+//To know which user right now(Admin/Member/Guest)
 function TestUser() {
     var CurUser = localStorage.getItem("CurrentUser");
     if (CurUser == "Admin") {

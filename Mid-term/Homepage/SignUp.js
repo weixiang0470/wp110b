@@ -1,14 +1,18 @@
+//Making admin permission but no yet done
 const admin = {
     username: 'admin',
     password: 'admin',
     email: 's50@student.nqu.edu.tw',
 }
+
+//For checking each input is correct use
 var Available = {
     user: false,
     email: false,
     password: false,
 }
 
+//Sign up function
 function signup() {
     var uCheck = false,
         eCheck = false,
@@ -22,6 +26,7 @@ function signup() {
     cCHeck = document.getElementById("labcheck").checked;
 
 
+    //Checking each input format
     var error = "";
     if (UserName != "") uCheck = true;
     else error += "Please enter username!\n";
@@ -31,6 +36,7 @@ function signup() {
     else error += "Password not match!\n";
     if (!cCHeck) error += "Please agree our term of service!\n";
     else;
+
 
     if (!pCheck || !eCheck || !cCHeck || !uCheck) alert(error);
     else {
@@ -45,7 +51,7 @@ function signup() {
     }
 }
 
-
+//Checking user name is available
 function CheckUser(Cuser) {
     if (localStorage.getItem("username") == null) localStorage.setItem("username", "");
     var IsUser = localStorage.getItem("username").split(",");
@@ -58,6 +64,7 @@ function CheckUser(Cuser) {
     }
 }
 
+//Checking email is available
 function CheckEmail(Cemail) {
 
     if (localStorage.getItem("email") == null) localStorage.setItem("email", "");
@@ -71,6 +78,7 @@ function CheckEmail(Cemail) {
     }
 }
 
+//Add user name, email, and password into localstorage
 function AddData(Auser, Aemail, Apassword) {
     var UserData = [],
         EmailData = [],

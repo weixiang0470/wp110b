@@ -1,11 +1,14 @@
+//when mouse hover will change it's background color
 function hover(x) {
     x.style.backgroundColor = "beige";
 }
 
+//when mouse moved out will change back it's background color
 function out(x) {
     x.style.backgroundColor = "bisque";
 }
 
+//changing Login to Logout, and vice versa
 function Show() {
     var x = document.getElementById("Login");
     var test = localStorage.getItem("CurrentUser");
@@ -13,6 +16,7 @@ function Show() {
     else x.innerHTML = "Login";
 }
 
+//Show User's information before logout
 function TestInformation() {
     var x = document.getElementById("Login").innerHTML;
     if (x == "Login") {
@@ -27,6 +31,7 @@ function TestInformation() {
     onclick="document.getElementById('id03').style.display='block'"*/
 }
 
+//After logout renew everything
 function logout() {
     localStorage.setItem("CurrentUser", "Guest");
     localStorage.setItem("CurrentUserName", "");
