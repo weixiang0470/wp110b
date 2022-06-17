@@ -52,12 +52,16 @@ function Match() {
         localStorage.setItem("CurrentUserEmail", "admin@admin.com.tw");
         alert("You're admin");
         TestUser();
+        localStorage.setItem("CartItems", "");
+        localStorage.setItem("CartPrice", "");
     } else if (Current_User != "" && Match_User && Match_Password && Index_Password == Index_User) {
         localStorage.setItem("CurrentUser", "Member");
         localStorage.setItem("CurrentUserName", Current_User);
         localStorage.setItem("CurrentUserEmail", Current_Email);
         alert("You're member");
         TestUser();
+        localStorage.setItem("CartItems", "");
+        localStorage.setItem("CartPrice", "");
     } else {
         localStorage.setItem("CurrentUser", "Guest");
         alert("Username or password wrong");

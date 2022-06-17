@@ -2,7 +2,7 @@ function What(x) {
     var Name = document.getElementById("ProductName");
     Name.innerHTML = x;
     localStorage.setItem("WhatProduct", x);
-    document.getElementById("Quantities").innerHTML = 0;
+    document.getElementById("Quantities").innerHTML = 1;
     document.getElementById("Price").innerHTML = `0NTD`;
 }
 
@@ -92,7 +92,7 @@ function Calculate() {
 }
 
 function SendOrder() {
-    alert("Order sent!");
+    alert("Added to cart!");
     document.getElementById("id04").style.display = "none";
     var CartItems = [];
     var CartPrice = [];
